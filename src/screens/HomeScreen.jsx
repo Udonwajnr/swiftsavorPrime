@@ -20,7 +20,7 @@ const HomeScreen = () => {
         {/* banner */}
         <Banner/>
         {/* restaurant based on location */}
-         <Text className="text-white text-xl font-bold">Restaurant In your Location</Text>
+         <Text className="text-white text-xl font-bold my-2">Restaurant In your Location</Text>
           <RestaurantsLocation/>
           </ScrollView>
     </SafeAreaView>

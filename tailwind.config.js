@@ -7,7 +7,8 @@ module.exports = {
         "white":"#FFFBFF",
         "light-red":"#C00100",
         "dark-black":"#121212",
-        "light-black":"#282828"
+        "light-black":"#282828",
+        "dark-opacity":"rgba(0,0,0,0.3)"
       }
     },
   },

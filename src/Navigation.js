@@ -9,6 +9,9 @@ import { FontAwesome } from '@expo/vector-icons';
 import ExploreScreen from "./screens/ExploreScreen";
 import CartScreen from "./screens/CartScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import MenuScreen from "./screens/MenuScreen";
+import MealDetailScreen from "./screens/MealDetailScreen";
+
 const Tab = createBottomTabNavigator();
 
 export default function Navigation(){
@@ -34,7 +37,6 @@ export default function Navigation(){
                 }}
             >
                 <Tab.Screen name="Home"
-
                  component={HomeScreen}
                  options={{
                     tabBarIcon:({focused})=>(<AntDesign name="home" size={24} color={focused?"#C00100":"#978583"} />),
@@ -48,12 +50,33 @@ export default function Navigation(){
                     headerShown:false,
                   }}
                  />
+
+                 <Tab.Screen name="RestaurantMenu"
+                 component={MenuScreen}
+                 options={{
+                    tabBarIcon:({focused})=>(<Feather name="search" size={24} color={focused?"#C00100":"#978583"} />),
+                    headerShown:false,
+                    tabBarButton: () => null,
+                  }}
+                 />
+
                  <Tab.Screen name="Cart"
                  component={CartScreen}
                  options={{
                     tabBarIcon:({focused})=>(<FontAwesome name="shopping-basket" size={24} color={focused?"#C00100":"#978583"} />),
                     headerShown:false,
-                  }}
+                    // tabBarButton:''
+
+                }}
+                 />
+                 <Tab.Screen name="MealDetail"
+                 component={MealDetailScreen}
+                 options={{
+                    tabBarIcon:({focused})=>(<FontAwesome name="shopping-basket" size={24} color={focused?"#C00100":"#978583"} />),
+                    headerShown:false,
+                    tabBarButton: () => null,
+
+                }}
                  />
                 <Tab.Screen name="Profile" component={ProfileScreen}  options={{
                     tabBarIcon:({focused})=>(<Feather name="user" size={24} color={focused?"#C00100":"#978583"} />),
