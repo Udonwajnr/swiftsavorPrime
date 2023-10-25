@@ -57,6 +57,7 @@ export default function Navigation(){
                     tabBarIcon:({focused})=>(<Feather name="search" size={24} color={focused?"#C00100":"#978583"} />),
                     headerShown:false,
                     tabBarButton: () => null,
+                    tabBarStyle: { display: "none" },
                   }}
                  />
 
@@ -75,6 +76,7 @@ export default function Navigation(){
                     tabBarIcon:({focused})=>(<FontAwesome name="shopping-basket" size={24} color={focused?"#C00100":"#978583"} />),
                     headerShown:false,
                     tabBarButton: () => null,
+                    tabBarStyle: { display: "none" },
 
                 }}
                  />
